@@ -1,5 +1,10 @@
 # Basket Random — 本地直接游玩版
 
+## 下载
+
+- ⚡ 加速下载（镜像）：[basket.zip](https://ghfast.top/https://github.com/colorful-lang/basketballgames.github.io/releases/download/v1.0.1/basket.zip)
+- 原始 Release：[basket.zip](https://github.com/colorful-lang/basketballgames.github.io/releases/download/v1.0.1/basket.zip)
+
 **双击 `index.html` 就能玩**，不需要启动服务器、不需要联网、不需要安装任何东西。
 `index.html` 是一个自包含的 HTML 文件，可以单独复制到 U 盘、其它电脑上直接运行。
 
