@@ -1,0 +1,62 @@
+/* ===== 管理员菜单（Alt+6）/ 类 ImGui 风格 ===== */
+#br-admin-root {
+  position: fixed; inset: 0; z-index: 2147483000; pointer-events: none;
+  font-family: "Segoe UI", "Microsoft YaHei", Consolas, monospace;
+  -webkit-user-select: none; user-select: none;
+}
+/* 独立于 #br-admin-root，面板隐藏时依然可见（z-index 介于抛物线与面板之间） */
+#br-admin-canvas { position: fixed; left: 0; top: 0; z-index: 2147482500; pointer-events: none; }
+#br-traj-canvas { position: fixed; left: 0; top: 0; z-index: 2147482000; pointer-events: none; }
+.br-title-right { display: flex; align-items: center; gap: 8px; }
+#br-admin-close {
+  width: 18px; height: 18px; line-height: 16px; padding: 0; text-align: center;
+  color: #fff; font-size: 15px; cursor: pointer;
+  background: rgba(0,0,0,.25); border: 0; border-radius: 3px;
+}
+#br-admin-close:hover { background: rgba(255, 90, 90, .8); }
+#br-close-bottom {
+  display: block; width: 100%; margin-top: 8px; padding: 6px 0;
+  color: #fff; font-size: 11px; cursor: pointer;
+  background: rgba(74, 158, 255, .22); border: 1px solid rgba(120, 160, 220, .45); border-radius: 4px;
+}
+#br-close-bottom:hover { background: rgba(74, 158, 255, .42); }
+.br-note { margin: 6px 0 2px; color: #8b97ab; font-size: 10.5px; line-height: 1.5; }
+#br-admin-panel {
+  position: absolute; top: 74px; left: 14px; width: 272px; pointer-events: auto;
+  color: #d8dee9; font-size: 12px; line-height: 1.4;
+  background: rgba(20, 22, 28, .95); border: 1px solid rgba(120, 160, 220, .45);
+  border-radius: 5px; box-shadow: 0 8px 28px rgba(0,0,0,.6); overflow: hidden;
+}
+#br-admin-title {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 27px; padding: 0 9px; cursor: move;
+  background: linear-gradient(180deg, #3a6fb0, #2b5290);
+  color: #fff; font-weight: 700; font-size: 12px; letter-spacing: .5px;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+}
+#br-admin-title .br-hint { font-size: 10px; font-weight: 400; opacity: .8; }
+#br-admin-body { padding: 7px 9px 9px; max-height: calc(100vh - 130px); overflow-y: auto; }
+#br-admin-body::-webkit-scrollbar { width: 7px; }
+#br-admin-body::-webkit-scrollbar-thumb { background: rgba(120,160,220,.4); border-radius: 4px; }
+.br-section {
+  margin: 9px 0 5px; padding-bottom: 3px; color: #ffc65c; font-size: 10px;
+  font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,.13);
+}
+.br-section:first-child { margin-top: 2px; }
+.br-row { display: flex; align-items: center; gap: 7px; margin: 5px 0; cursor: pointer; }
+.br-row input[type="checkbox"] { flex: none; margin: 0; accent-color: #4a9eff; cursor: pointer; }
+.br-row select {
+  flex: 1; min-width: 0; padding: 2px 5px; color: #e8eef8; font-size: 11px;
+  background: #222836; border: 1px solid rgba(255,255,255,.2); border-radius: 3px; cursor: pointer;
+}
+.br-row select option { color: #111; }
+.br-slider { display: flex; align-items: center; gap: 6px; margin: 5px 0; }
+.br-slider > span { flex: none; width: 62px; color: #a9b6cc; font-size: 11px; }
+.br-slider input[type="range"] { flex: 1; min-width: 0; margin: 0; accent-color: #4a9eff; cursor: pointer; }
+.br-slider b { flex: none; width: 38px; text-align: right; color: #8fd3ff; font-size: 11px; font-variant-numeric: tabular-nums; }
+#br-status {
+  padding: 6px 7px; color: #9fe6a0; font-family: Consolas, monospace; font-size: 10.5px;
+  line-height: 1.55; background: rgba(0,0,0,.34); border-radius: 3px; white-space: pre-wrap;
+}
+.br-foot { margin-top: 8px; color: #7d879a; font-size: 10px; text-align: center; }

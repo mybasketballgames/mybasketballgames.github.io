@@ -1,0 +1,62 @@
+<div id="c3-set-btn" title="Settings (F2)">&#9881;</div>
+<div id="c3-set-panel" hidden>
+  <button id="c3-set-close" title="Close">&times;</button>
+  <h3 data-i18n="title">游戏设置</h3>
+
+  <div class="c3-set-row">
+    <label><span data-i18n="language">界面语言</span>
+      <select id="c3-set-lang"><option value="zh">中文</option><option value="en">English</option></select>
+    </label>
+  </div>
+
+  <div class="c3-set-row">
+    <label><span data-i18n="quality">画质</span>
+      <select id="c3-set-quality"><option value="0.75">流畅 0.75x</option><option value="1" selected>标准 1x</option><option value="1.25">高清 1.25x</option><option value="1.5">超清 1.5x</option></select>
+    </label>
+  </div>
+
+  <div class="c3-set-row">
+    <label><span data-i18n="volume">音量</span><span id="c3-set-vol-val">100%</span></label>
+    <input id="c3-set-vol" type="range" min="0" max="100" step="1" value="100">
+  </div>
+
+  <label class="c3-set-chk"><input id="c3-set-mute" type="checkbox"><span data-i18n="mute">静音</span></label>
+  <label class="c3-set-chk"><input id="c3-set-fps" type="checkbox"><span data-i18n="showFps">左上角显示帧率</span></label>
+  <label class="c3-set-chk"><input id="c3-set-unlimitedfps" type="checkbox"><span data-i18n="unlimitedFps">解除帧率限制（无限制）</span></label>
+  <label class="c3-set-chk"><input id="c3-set-infinite" type="checkbox"><span data-i18n="infinite">无限模式（无分数上限）</span></label>
+  <label class="c3-set-chk"><input id="c3-set-scoreboard" type="checkbox"><span data-i18n="scoreboard">显示比分板</span></label>
+  <label class="c3-set-chk"><input id="c3-set-hints" type="checkbox"><span data-i18n="hints">显示操作提示</span></label>
+  <label class="c3-set-chk"><input id="c3-set-smooth" type="checkbox"><span data-i18n="smooth">画面平滑（关闭为像素风）</span></label>
+  <label class="c3-set-chk"><input id="c3-set-gametext" type="checkbox"><span data-i18n="gameText">显示球类型提示</span></label>
+  <label class="c3-set-chk"><input id="c3-set-traj" type="checkbox"><span data-i18n="traj">抛物线辅助（长按投篮键显示）</span></label>
+  <label class="c3-set-chk"><input id="c3-set-touch" type="checkbox"><span data-i18n="touchAim">长按屏幕也能自瞄（左半屏玩家1 / 右半屏玩家2）</span></label>
+  <div class="c3-set-row">
+    <label><span data-i18n="power">投篮力度 / 弧线</span><span id="c3-set-power-val">1.00</span></label>
+    <input id="c3-set-power" type="range" min="0.5" max="2" step="0.05" value="1">
+  </div>
+  <label class="c3-set-chk"><input id="c3-set-swap" type="checkbox"><span data-i18n="swapScore">比分左右对调（修正原生计分方向）</span></label>
+
+  <button class="c3-set-btn2" id="c3-set-fullscreen" data-i18n="fullscreen">&#9974; 全屏 / 退出全屏</button>
+  <button class="c3-set-btn2" id="c3-set-restart" data-i18n="restart">&#8635; 重新开始游戏</button>
+  <div class="c3-set-note" data-i18n="noteInfinite">切换语言 / 画质 / 无限模式会自动重新开始一局</div>
+
+  <details class="c3-set-ballcfg">
+    <summary data-i18n="ballCfg">球类型名称（可自定义）</summary>
+    <div class="c3-ball-cur" data-i18n="ballCur">当前球：</div>
+    <code id="c3-ball-current">-</code>
+    <label><code>ball</code><input id="c3-ball-ball" type="text" maxlength="16"></label>
+    <label><code>heavy</code><input id="c3-ball-heavy" type="text" maxlength="16"></label>
+    <label><code>kames</code><input id="c3-ball-kames" type="text" maxlength="16"></label>
+    <label><code>smallball</code><input id="c3-ball-smallball" type="text" maxlength="16"></label>
+    <div class="c3-set-note" data-i18n="ballCfgNote">左边是游戏内部动画名；改完即时生效并自动保存</div>
+  </details>
+
+  <div class="c3-set-tips" id="c3-set-tips"></div>
+  <div class="c3-set-brand" id="c3-set-brand" title="数据线">数据线</div>
+</div>
+
+<div id="c3-fps" hidden></div>
+<div id="c3-scoreboard" hidden></div>
+<div id="c3-hintbar" hidden></div>
+<div id="c3-game-text" hidden></div>
+<div id="c3-splash"><div class="c3-splash-main">数据线</div><div class="c3-splash-sub" id="c3-splash-sub">Basket Random · 本地版</div></div>

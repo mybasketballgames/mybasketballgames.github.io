@@ -1,0 +1,43 @@
+<!-- 绘制层独立于面板：关闭菜单后仍继续显示方框 / 骨架 / 距离线 -->
+<canvas id="br-admin-canvas"></canvas>
+<div id="br-admin-root" hidden>
+  <div id="br-admin-panel">
+    <div id="br-admin-title">
+      <span>管理员菜单 / ADMIN</span>
+      <span class="br-title-right"><span class="br-hint">Alt+6</span><button id="br-admin-close" title="关闭菜单">×</button></span>
+    </div>
+    <div id="br-admin-body">
+
+      <div class="br-section">绘制 / OVERLAY</div>
+      <label class="br-row"><input id="br-overlay" type="checkbox"><span><b>启用绘制层（关闭菜单后仍保持）</b></span></label>
+      <label class="br-row"><input id="br-box" type="checkbox"><span>方框 Box（球员 / 球 / 篮筐）</span></label>
+      <label class="br-row"><input id="br-skel" type="checkbox"><span>骨架 Skeleton</span></label>
+      <label class="br-row"><input id="br-dist" type="checkbox"><span>距离线 Distance</span></label>
+      <label class="br-row"><input id="br-label" type="checkbox"><span>名称标签</span></label>
+      <label class="br-row"><input id="br-aimline" type="checkbox"><span>瞄准线</span></label>
+      <div class="br-slider"><span>线宽</span><input id="br-linewidth" type="range" min="1" max="5" step="0.5" value="1.5"><b id="br-linewidth-v">1.5</b></div>
+
+      <div class="br-section">自动投篮 / AUTO SHOT</div>
+      <label class="br-row"><input id="br-auto" type="checkbox"><span>自瞄（长按按键 / 屏幕即激活）</span></label>
+      <div class="br-row"><span>投篮目标</span>
+        <select id="br-side">
+          <option value="both">自动选对侧（按持球方，起投锁定）</option>
+          <option value="p1">固定右侧筐</option>
+          <option value="p2">固定左侧筐</option>
+        </select>
+      </div>
+      <div class="br-note"><b>长按即激活、按多久都有效</b>：左方 <b>W / 空格</b>，右方 <b>↑</b>；也可<b>长按屏幕</b>（左半屏=玩家1，右半屏=玩家2，按住 250ms 起算）。抛物线一直显示；自瞄<b>必须真正拿到球</b>（球被抓在手上）才起投，球在空中 / 落地 / 对面手上时只显示等待提示，不动球、不加分。力度在 ⚙ 设置里调。</div>
+
+      <div class="br-section">校准 / CALIBRATION</div>
+      <div class="br-slider"><span>缩放</span><input id="br-scale" type="range" min="0.6" max="1.6" step="0.01" value="1"><b id="br-scale-v">1.00</b></div>
+      <div class="br-slider"><span>X 偏移</span><input id="br-offx" type="range" min="-120" max="120" step="1" value="0"><b id="br-offx-v">0</b></div>
+      <div class="br-slider"><span>Y 偏移</span><input id="br-offy" type="range" min="-120" max="120" step="1" value="0"><b id="br-offy-v">0</b></div>
+
+      <div class="br-section">状态 / STATUS</div>
+      <div id="br-status">初始化…</div>
+      <button id="br-close-bottom">关闭菜单</button>
+      <div class="br-foot">Alt+6 / Esc / × 关闭 · 双击标题栏复位<br>关闭菜单后绘制与自瞄照常运行</div>
+    </div>
+  </div>
+</div>
+<canvas id="br-traj-canvas"></canvas>

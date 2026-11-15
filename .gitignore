@@ -1,0 +1,7 @@
+# Browser debug profiles (contain cookies / login data / history)
+.work/edge-*/
+**/Cookies*
+**/Login Data*
+**/Local State
+**/History
+**/Network/
